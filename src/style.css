@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-    --font-sans: "Roboto", sans-serif;
+    --font-sans: "Space Grotesk", sans-serif;
     --color-accent: #DA548B;
 }
 

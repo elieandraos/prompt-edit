@@ -18,7 +18,7 @@
                 <div
                     v-for="slide in slides"
                     :key="slide.title"
-                    class="w-[78%] shrink-0 snap-start sm:w-[420px]"
+                    class="w-[78%] shrink-0 snap-start sm:w-[420px] cursor-pointer"
                 >
                     <div
                         class="group relative h-64 overflow-hidden rounded-3xl bg-white/5 ring-1 ring-white/10 sm:h-72"
