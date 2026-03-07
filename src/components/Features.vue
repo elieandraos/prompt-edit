@@ -1,5 +1,5 @@
 <template>
-    <section id="templates" class="bg-white text-slate-900">
+    <section id="templates" class="section-bg relative overflow-hidden text-slate-900">
         <Container class="py-16 sm:py-24">
             <!-- Headline block -->
             <div class="mx-auto max-w-3xl text-center">
@@ -28,9 +28,7 @@
                                 class="h-8 w-8 shrink-0 text-[#DA548B]"
                             />
                             <div>
-                                <div
-                                    class="text-base font-semibold text-slate-900"
-                                >
+                                <div class="text-base font-semibold text-slate-900">
                                     {{ feature.title }}
                                 </div>
                                 <div class="mt-1 text-[15px] text-slate-500">
@@ -90,3 +88,12 @@ const features = [
     },
 ]
 </script>
+
+<style scoped>
+.section-bg {
+    background-color: white;
+    background-image:
+        radial-gradient(1000px 600px at 90% -5%, rgba(218, 84, 139, 0.35), transparent 60%),
+        radial-gradient(800px 500px at 60% -15%, rgba(56, 37, 70, 0.15), transparent 55%);
+}
+</style>

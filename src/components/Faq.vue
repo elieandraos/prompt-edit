@@ -1,5 +1,5 @@
 <template>
-    <section id="faq" class="bg-white text-slate-900">
+    <section id="faq" class="section-bg relative overflow-hidden text-slate-900">
         <Container class="py-16 sm:py-24">
 
                 <h2 class="text-3xl font-semibold tracking-tight mx-auto text-center sm:text-4xl">
@@ -66,3 +66,12 @@ const faqs = [
     },
 ]
 </script>
+
+<style scoped>
+.section-bg {
+    background-color: white;
+    background-image:
+        radial-gradient(1000px 600px at 50% 110%, rgba(218, 84, 139, 0.35), transparent 60%),
+        radial-gradient(800px 500px at 40% 105%, rgba(56, 37, 70, 0.15), transparent 55%);
+}
+</style>
