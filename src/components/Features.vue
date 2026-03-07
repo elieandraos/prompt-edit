@@ -1,5 +1,8 @@
 <template>
-    <section id="templates" class="section-bg relative overflow-hidden text-slate-900">
+    <section
+        id="templates"
+        class="section-bg relative overflow-hidden text-slate-900"
+    >
         <Container class="py-16 sm:py-24">
             <!-- Headline block -->
             <div class="mx-auto max-w-3xl text-center">
@@ -25,10 +28,12 @@
                         >
                             <component
                                 :is="feature.icon"
-                                class="h-8 w-8 shrink-0 text-accent"
+                                class="text-accent h-8 w-8 shrink-0"
                             />
                             <div>
-                                <div class="text-base font-semibold text-slate-900">
+                                <div
+                                    class="text-base font-semibold text-slate-900"
+                                >
                                     {{ feature.title }}
                                 </div>
                                 <div class="mt-1 text-sm text-slate-500">
@@ -42,7 +47,7 @@
                 <div class="mt-8 flex justify-center">
                     <a
                         href="#"
-                        class="inline-flex items-center gap-3 rounded-xl bg-accent px-5 py-3 text-sm font-medium text-white shadow-sm hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent disabled:cursor-not-allowed disabled:opacity-40"
+                        class="bg-accent focus-visible:ring-accent inline-flex items-center gap-3 rounded-xl px-5 py-3 text-sm font-medium text-white shadow-sm hover:opacity-90 focus-visible:ring-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-40"
                     >
                         Join now
                         <ArrowRightIcon class="h-4 w-4" />
@@ -93,7 +98,15 @@ const features = [
 .section-bg {
     background-color: white;
     background-image:
-        radial-gradient(1000px 600px at 90% -5%, rgba(218, 84, 139, 0.35), transparent 60%),
-        radial-gradient(800px 500px at 60% -15%, rgba(56, 37, 70, 0.15), transparent 55%);
+        radial-gradient(
+            1000px 600px at 90% -5%,
+            rgba(218, 84, 139, 0.35),
+            transparent 60%
+        ),
+        radial-gradient(
+            800px 500px at 60% -15%,
+            rgba(56, 37, 70, 0.15),
+            transparent 55%
+        );
 }
 </style>

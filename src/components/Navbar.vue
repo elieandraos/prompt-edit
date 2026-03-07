@@ -8,10 +8,16 @@
                     :href="link.href"
                     class="text-sm font-medium transition"
                     :class="[
-                        onLight ? 'text-black/70 hover:text-black' : 'text-white/70 hover:text-white',
+                        onLight
+                            ? 'text-black/70 hover:text-black'
+                            : 'text-white/70 hover:text-white',
                         link.primary ? 'rounded-full px-4 py-1.5' : '',
-                        link.primary && onLight ? 'bg-black/10 hover:bg-black/20' : '',
-                        link.primary && !onLight ? 'bg-white/10 hover:bg-white/20' : '',
+                        link.primary && onLight
+                            ? 'bg-black/10 hover:bg-black/20'
+                            : '',
+                        link.primary && !onLight
+                            ? 'bg-white/10 hover:bg-white/20'
+                            : '',
                     ]"
                 >
                     {{ link.label }}

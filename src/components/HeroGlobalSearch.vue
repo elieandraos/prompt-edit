@@ -37,7 +37,7 @@
                 <li v-for="category in categories" :key="category.slug">
                     <button
                         type="button"
-                        class="flex w-full items-center justify-between rounded-xl px-4 py-3 text-left text-sm text-white/80 hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                        class="focus-visible:ring-accent flex w-full items-center justify-between rounded-xl px-4 py-3 text-left text-sm text-white/80 hover:bg-white/10 hover:text-white focus-visible:ring-2 focus-visible:outline-none"
                         @click="select(category)"
                     >
                         <span>{{ category.label }}</span>

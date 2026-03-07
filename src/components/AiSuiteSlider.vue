@@ -1,5 +1,5 @@
 <template>
-    <section id="ai-tools" class="bg-[#0E172B] px-6 py-16 sm:py-24 text-white">
+    <section id="ai-tools" class="bg-[#0E172B] px-6 py-16 text-white sm:py-24">
         <!-- Header -->
         <h2
             class="text-3xl font-semibold tracking-tight text-white/40 sm:text-4xl"
@@ -18,7 +18,7 @@
                 <div
                     v-for="slide in slides"
                     :key="slide.title"
-                    class="w-[78%] shrink-0 snap-start sm:w-[420px] cursor-pointer"
+                    class="w-[78%] shrink-0 cursor-pointer snap-start sm:w-[420px]"
                 >
                     <div
                         class="group relative h-64 overflow-hidden rounded-3xl bg-white/5 ring-1 ring-white/10 sm:h-72"

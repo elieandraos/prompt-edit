@@ -3,12 +3,16 @@
         <Container class="py-16 sm:py-24">
             <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
                 <div v-for="col in columns" :key="col.heading">
-                    <h3 class="text-xs font-semibold uppercase tracking-widest text-white/60">
+                    <h3
+                        class="text-xs font-semibold tracking-widest text-white/60 uppercase"
+                    >
                         {{ col.heading }}
                     </h3>
                     <ul class="mt-6 space-y-4 text-base text-white/80">
                         <li v-for="link in col.links" :key="link.label">
-                            <a :href="link.href" class="hover:text-white">{{ link.label }}</a>
+                            <a :href="link.href" class="hover:text-white">{{
+                                link.label
+                            }}</a>
                         </li>
                     </ul>
                 </div>

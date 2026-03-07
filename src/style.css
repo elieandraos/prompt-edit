@@ -2,7 +2,7 @@
 
 @theme {
     --font-sans: "Space Grotesk", sans-serif;
-    --color-accent: #DA548B;
+    --color-accent: #da548b;
 }
 
 @layer utilities {

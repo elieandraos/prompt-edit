@@ -1,36 +1,39 @@
 <template>
-    <section id="faq" class="section-bg relative overflow-hidden text-slate-900">
+    <section
+        id="faq"
+        class="section-bg relative overflow-hidden text-slate-900"
+    >
         <Container class="py-16 sm:py-24">
+            <h2
+                class="mx-auto text-center text-3xl font-semibold tracking-tight sm:text-4xl"
+            >
+                Frequently asked questions.
+            </h2>
 
-                <h2 class="text-3xl font-semibold tracking-tight mx-auto text-center sm:text-4xl">
-                    Frequently asked questions.
-                </h2>
-
-                <div class="mt-12 divide-y divide-slate-100">
-                    <div v-for="(item, index) in faqs" :key="item.question">
-                        <dt>
-                            <button
-                                class="flex w-full items-center justify-between gap-4 py-5 text-left text-base font-medium text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-                                @click="toggle(index)"
-                            >
-                                {{ item.question }}
-                                <ChevronIcon
-                                    class="h-5 w-5 shrink-0 text-slate-400 transition duration-300"
-                                    :class="open === index ? 'rotate-180' : ''"
-                                />
-                            </button>
-                        </dt>
-                        <dd
-                            class="overflow-hidden transition-all duration-300"
-                            :class="open === index ? 'max-h-64 pb-5' : 'max-h-0'"
+            <div class="mt-12 divide-y divide-slate-100">
+                <div v-for="(item, index) in faqs" :key="item.question">
+                    <dt>
+                        <button
+                            class="focus-visible:ring-accent flex w-full items-center justify-between gap-4 py-5 text-left text-base font-medium text-slate-900 focus-visible:ring-2 focus-visible:outline-none"
+                            @click="toggle(index)"
                         >
-                            <p class="text-sm leading-relaxed text-slate-500">
-                                {{ item.answer }}
-                            </p>
-                        </dd>
-                    </div>
+                            {{ item.question }}
+                            <ChevronIcon
+                                class="h-5 w-5 shrink-0 text-slate-400 transition duration-300"
+                                :class="open === index ? 'rotate-180' : ''"
+                            />
+                        </button>
+                    </dt>
+                    <dd
+                        class="overflow-hidden transition-all duration-300"
+                        :class="open === index ? 'max-h-64 pb-5' : 'max-h-0'"
+                    >
+                        <p class="text-sm leading-relaxed text-slate-500">
+                            {{ item.answer }}
+                        </p>
+                    </dd>
                 </div>
-
+            </div>
         </Container>
     </section>
 </template>
@@ -61,7 +64,8 @@ const faqs = [
         answer: "Absolutely! As a subscriber to Content Creator Templates, you will get unlimited downloads of any assets available in the member library. Do note that we do not allow automatic downloading tools.",
     },
     {
-        question: "What happens to my distributed videos after cancelling my subscription?",
+        question:
+            "What happens to my distributed videos after cancelling my subscription?",
         answer: "All videos created and published during an active subscription are cleared from 3rd party's copyright claims forever.",
     },
 ]
@@ -71,7 +75,15 @@ const faqs = [
 .section-bg {
     background-color: white;
     background-image:
-        radial-gradient(1000px 600px at 50% 110%, rgba(218, 84, 139, 0.35), transparent 60%),
-        radial-gradient(800px 500px at 40% 105%, rgba(56, 37, 70, 0.15), transparent 55%);
+        radial-gradient(
+            1000px 600px at 50% 110%,
+            rgba(218, 84, 139, 0.35),
+            transparent 60%
+        ),
+        radial-gradient(
+            800px 500px at 40% 105%,
+            rgba(56, 37, 70, 0.15),
+            transparent 55%
+        );
 }
 </style>
