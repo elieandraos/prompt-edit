@@ -61,13 +61,12 @@ import SearchIcon from "../icons/SearchIcon.vue"
 
 const categories = [
     { label: "Video assets", slug: "video-assets" },
-    { label: "AI videos", slug: "ai-videos" },
     { label: "LUTs", slug: "luts" },
     { label: "Sound Effects", slug: "sound-effects" },
     { label: "Prompts", slug: "prompts" },
 ]
 
-const selected = ref(categories[1])
+const selected = ref(categories[0])
 const query = ref("")
 const open = ref(false)
 const root = ref(null)
