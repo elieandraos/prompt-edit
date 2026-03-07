@@ -3,8 +3,13 @@
         ref="root"
         class="relative z-20 flex items-center gap-3 rounded-full bg-white/10 px-6 py-3 ring-1 ring-white/20 backdrop-blur focus-within:ring-white/40"
     >
-        <!-- Magnifier (icon only, not clickable) -->
-        <svg class="h-5 w-5 shrink-0 text-white/75" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <!-- Search icon -->
+        <svg
+            class="h-5 w-5 shrink-0 text-white/75"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+        >
             <path
                 fill-rule="evenodd"
                 d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z"
@@ -16,8 +21,8 @@
         <button
             type="button"
             class="inline-flex cursor-pointer items-center gap-2 text-sm font-medium text-white/80 hover:text-white focus:outline-none"
-            @click="toggle"
             :aria-expanded="open ? 'true' : 'false'"
+            @click="toggle"
         >
             <span class="truncate">{{ selected.label }}</span>
             <svg
@@ -46,24 +51,21 @@
         <!-- Dropdown -->
         <div
             v-if="open"
-            class="absolute inset-x-3 top-full z-[9999] mt-3
-         max-h-[60vh] overflow-auto overscroll-contain
-         rounded-2xl sm:inset-x-auto sm:left-6 sm:right-auto
-         sm:w-[34rem] sm:max-h-none sm:rounded-3xl
-         bg-white/10 ring-1 ring-white/15 backdrop-blur-xl
-         shadow-[0_20px_60px_rgba(0,0,0,0.45)]"
+            class="absolute inset-x-3 top-full z-[9999] mt-3 max-h-[60vh] overflow-auto overscroll-contain rounded-2xl bg-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.45)] ring-1 ring-white/15 backdrop-blur-xl sm:inset-x-auto sm:right-auto sm:left-6 sm:max-h-none sm:w-[34rem] sm:rounded-3xl"
         >
             <ul class="p-2">
                 <li v-for="category in categories" :key="category.slug">
                     <button
                         type="button"
-                        class="flex w-full items-center justify-between rounded-xl sm:rounded-2xl
-               px-4 py-3 sm:px-5 sm:py-4
-               text-left text-sm text-white/80 hover:bg-white/10 hover:text-white"
+                        class="flex w-full items-center justify-between rounded-xl px-4 py-3 text-left text-sm text-white/80 hover:bg-white/10 hover:text-white sm:rounded-2xl sm:px-5 sm:py-4"
                         @click="select(category)"
                     >
                         <span>{{ category.label }}</span>
-                        <span v-if="category.slug === selected.slug" class="text-emerald-300/90">●</span>
+                        <span
+                            v-if="category.slug === selected.slug"
+                            class="text-emerald-300/90"
+                            >●</span
+                        >
                     </button>
                 </li>
             </ul>
@@ -102,25 +104,28 @@ const placeholder = computed(() => {
         default:
             return "Search…"
     }
-});
+})
 
-function toggle() {
+const toggle = () => {
     open.value = !open.value
 }
-function select(c) {
-    selected.value = c
+
+const select = (category) => {
+    selected.value = category
+
     open.value = false
 }
-function onClickOutside(e) {
+
+const onClickOutside = (event) => {
     if (!open.value) return
-    if (root.value && !root.value.contains(e.target)) open.value = false
+    if (root.value && !root.value.contains(event.target)) open.value = false
 }
 
 onMounted(() => {
     window.addEventListener("mousedown", onClickOutside)
-});
+})
 
 onBeforeUnmount(() => {
     window.removeEventListener("mousedown", onClickOutside)
-});
+})
 </script>
