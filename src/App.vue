@@ -1,4 +1,5 @@
 <template>
+    <Navbar />
     <Hero />
     <AiSuiteSlider />
     <Features />
@@ -11,7 +12,8 @@
 import AiSuiteSlider from "./components/AiSuiteSlider.vue"
 import Faq from "./components/Faq.vue"
 import Features from "./components/Features.vue"
-import Footer from './components/Footer.vue'
+import Footer from "./components/Footer.vue"
 import Hero from "./components/Hero.vue"
+import Navbar from "./components/Navbar.vue"
 import Pricing from "./components/Pricing.vue"
 </script>
