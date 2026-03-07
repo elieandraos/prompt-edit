@@ -9,26 +9,31 @@
                 </p>
 
                 <!-- Toggle -->
-                <div class="mt-8 inline-flex items-center gap-3 rounded-full bg-white/10 p-1">
-                    <button
-                        v-for="option in billingOptions"
-                        :key="option.value"
-                        class="rounded-full px-5 py-2 text-sm font-medium transition"
-                        :class="
-                            yearly === option.value
-                                ? 'bg-white text-slate-900'
-                                : 'text-white/50 hover:text-white/80'
-                        "
-                        @click="yearly = option.value"
-                    >
-                        {{ option.label }}
-                        <span
-                            v-if="option.badge"
-                            class="ml-1.5 rounded-full bg-[#DA548B] px-2 py-0.5 text-xs text-white"
+                <div class="mt-8 inline-flex items-center rounded-full bg-white/10 p-1">
+                    <div class="relative flex">
+                        <!-- Sliding pill -->
+                        <div
+                            class="absolute inset-y-0 rounded-full bg-white transition-all duration-300"
+                            :style="pillStyle"
+                        />
+
+                        <button
+                            v-for="(option, i) in billingOptions"
+                            :key="option.value"
+                            :ref="(el) => { if (el) btnRefs[i] = el }"
+                            class="relative z-10 rounded-full px-5 py-2 text-sm font-medium transition-colors duration-300"
+                            :class="yearly === option.value ? 'text-slate-900' : 'text-white/50 hover:text-white/80'"
+                            @click="yearly = option.value"
                         >
-                            {{ option.badge }}
-                        </span>
-                    </button>
+                            {{ option.label }}
+                            <span
+                                v-if="option.badge"
+                                class="ml-1.5 rounded-full bg-[#DA548B] px-2 py-0.5 text-xs text-white"
+                            >
+                                {{ option.badge }}
+                            </span>
+                        </button>
+                    </div>
                 </div>
             </div>
 
@@ -77,12 +82,14 @@
 </template>
 
 <script setup>
-import { ref } from "vue"
+import { computed, nextTick, onMounted, ref, watch } from "vue"
 
 import Container from "../layout/Container.vue"
 import ShieldCheckIcon from "../icons/ShieldCheckIcon.vue"
 
 const yearly = ref(false)
+const btnRefs = ref([])
+const pillStyle = ref({})
 
 const billingOptions = [
     { label: "Monthly", value: false },
@@ -96,4 +103,23 @@ const perks = [
     "Request the assets you need",
     "Licensed for personal and commercial use",
 ]
+
+const activeIndex = computed(() => (yearly.value ? 1 : 0))
+
+const updatePill = () => {
+    const btn = btnRefs.value[activeIndex.value]
+
+    if (!btn) return
+
+    pillStyle.value = {
+        left: `${btn.offsetLeft}px`,
+        width: `${btn.offsetWidth}px`,
+    }
+}
+
+watch(yearly, () => updatePill())
+
+onMounted(() => {
+    nextTick(() => updatePill())
+})
 </script>
