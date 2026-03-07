@@ -12,7 +12,7 @@ Modern, premium, and creative-focused. The design feels aspirational and profess
 
 ### Color Palette
 
-The foundation is a deep navy that feels immersive and cinematic. A single bold accent — a vibrant magenta-rose — punctuates interactive elements, calls to action, and highlights throughout the page. Sections transition between dark navy, deep purple-brown, and near-black, creating a sense of depth and richness as you scroll. White text at varying levels of opacity builds visual hierarchy without introducing additional colors.
+The foundation is a deep navy (#0E172B) that feels immersive and cinematic. A single bold accent — a vibrant magenta-rose (#DA548B) — punctuates interactive elements, calls to action, and highlights throughout the page. Sections transition between dark navy (#0E172B), deep purple-brown (#382546), and near-black, creating a sense of depth and richness as you scroll. White text at varying levels of opacity builds visual hierarchy without introducing additional colors.
 
 ### Typography
 
@@ -42,4 +42,6 @@ The AI tools section scrolls horizontally with gradient fade-outs at the edges, 
 npm run dev       # Start dev server with hot module replacement
 npm run build     # Production build to dist/
 npm run preview   # Serve the production build locally
+npm run lint      # Lint with ESLint
+npm run format    # Format with Prettier
 ```
