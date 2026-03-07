@@ -21,14 +21,14 @@
                             v-for="(option, i) in billingOptions"
                             :key="option.value"
                             :ref="(el) => { if (el) btnRefs[i] = el }"
-                            class="relative z-10 rounded-full px-5 py-2 text-sm font-medium transition-colors duration-300"
+                            class="relative z-10 rounded-full px-5 py-2 text-sm font-medium transition-colors duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                             :class="yearly === option.value ? 'text-slate-900' : 'text-white/50 hover:text-white/80'"
                             @click="yearly = option.value"
                         >
                             {{ option.label }}
                             <span
                                 v-if="option.badge"
-                                class="ml-1.5 rounded-full bg-[#DA548B] px-2 py-0.5 text-xs text-white"
+                                class="ml-1.5 rounded-full bg-accent px-2 py-0.5 text-xs text-white"
                             >
                                 {{ option.badge }}
                             </span>
@@ -43,7 +43,7 @@
                     <div class="flex items-start justify-between">
                         <div>
                             <h3 class="text-lg font-semibold tracking-tight">All-access</h3>
-                            <p class="mt-1 text-sm text-white/60">
+                            <p class="mt-1 text-sm text-white/75">
                                 {{ yearly ? "Billed annually" : "Billed monthly" }}
                             </p>
                         </div>
@@ -53,7 +53,7 @@
                                 <span class="text-4xl font-bold">
                                     {{ yearly ? "$299" : "$29" }}
                                 </span>
-                                <span class="text-sm text-white/60">
+                                <span class="text-sm text-white/75">
                                     {{ yearly ? "/year" : "/month" }}
                                 </span>
                             </div>
@@ -62,7 +62,7 @@
 
                     <ul class="mt-8 space-y-3 text-sm text-white/70">
                         <li v-for="item in perks" :key="item" class="flex items-center gap-2">
-                            <ShieldCheckIcon class="h-4 w-4 shrink-0 text-[#DA548B]" />
+                            <ShieldCheckIcon class="h-4 w-4 shrink-0 text-accent" />
                             {{ item }}
                         </li>
                     </ul>
@@ -70,7 +70,7 @@
                     <div class="mt-8">
                         <a
                             href="#"
-                            class="inline-flex w-full items-center justify-center rounded-xl bg-white px-4 py-3 text-sm font-medium text-slate-900 hover:bg-white/90"
+                            class="inline-flex w-full items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-medium text-slate-900 hover:bg-white/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 disabled:cursor-not-allowed disabled:opacity-40"
                         >
                             Create Account
                         </a>

@@ -4,12 +4,12 @@
     >
         <Container class="text-center">
             <h1
-                class="text-4xl font-semibold tracking-tight text-white sm:text-7xl"
+                class="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-7xl"
             >
                 Accelerate your creative workflow.
             </h1>
 
-            <p class="mt-6 text-sm text-white/60 sm:text-xl">
+            <p class="mt-6 text-sm text-white/75 sm:text-xl">
                 Unlimited video templates and pay-per-use AI generation — built
                 for modern creators.
             </p>

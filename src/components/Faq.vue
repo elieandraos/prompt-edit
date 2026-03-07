@@ -10,7 +10,7 @@
                     <div v-for="(item, index) in faqs" :key="item.question">
                         <dt>
                             <button
-                                class="flex w-full items-center justify-between gap-4 py-5 text-left text-base font-medium text-slate-900"
+                                class="flex w-full items-center justify-between gap-4 py-5 text-left text-base font-medium text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                                 @click="toggle(index)"
                             >
                                 {{ item.question }}
@@ -24,7 +24,7 @@
                             class="overflow-hidden transition-all duration-300"
                             :class="open === index ? 'max-h-64 pb-5' : 'max-h-0'"
                         >
-                            <p class="text-[15px] leading-relaxed text-slate-500">
+                            <p class="text-sm leading-relaxed text-slate-500">
                                 {{ item.answer }}
                             </p>
                         </dd>

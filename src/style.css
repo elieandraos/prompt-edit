@@ -2,6 +2,7 @@
 
 @theme {
     --font-sans: "Roboto", sans-serif;
+    --color-accent: #DA548B;
 }
 
 @layer utilities {

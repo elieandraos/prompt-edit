@@ -3,7 +3,7 @@
         <Container class="py-16 sm:py-24">
             <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
                 <div v-for="col in columns" :key="col.heading">
-                    <h3 class="text-xs font-semibold uppercase tracking-widest text-white/50">
+                    <h3 class="text-xs font-semibold uppercase tracking-widest text-white/60">
                         {{ col.heading }}
                     </h3>
                     <ul class="mt-6 space-y-4 text-base text-white/80">
@@ -15,9 +15,9 @@
             </div>
 
             <div
-                class="mt-14 flex flex-col gap-6 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between"
+                class="mt-12 flex flex-col gap-6 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between"
             >
-                <p class="text-sm text-white/60">
+                <p class="text-sm text-white/70">
                     © 2026 Content Creator Templates. All rights reserved.
                 </p>
 

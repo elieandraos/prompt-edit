@@ -1,5 +1,5 @@
 <template>
-    <section id="ai-tools" class="bg-[#0E172B] px-6 text-white">
+    <section id="ai-tools" class="bg-[#0E172B] px-6 py-16 sm:py-24 text-white">
         <!-- Header -->
         <h2
             class="text-3xl font-semibold tracking-tight text-white/40 sm:text-4xl"
@@ -44,12 +44,12 @@
                                     >
                                         {{ slide.title }}
                                     </p>
-                                    <p class="mt-0.5 text-xs text-white/60">
+                                    <p class="mt-0.5 text-xs text-white/75">
                                         {{ slide.subtitle }}
                                     </p>
                                 </div>
                                 <span
-                                    class="text-xs text-white/50 group-hover:text-white/70"
+                                    class="text-xs text-white/65 group-hover:text-white/80"
                                 >
                                     Explore
                                 </span>

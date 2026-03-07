@@ -37,13 +37,13 @@
                 <li v-for="category in categories" :key="category.slug">
                     <button
                         type="button"
-                        class="flex w-full items-center justify-between rounded-xl px-4 py-3 text-left text-sm text-white/80 hover:bg-white/10 hover:text-white sm:rounded-2xl sm:px-5 sm:py-4"
+                        class="flex w-full items-center justify-between rounded-xl px-4 py-3 text-left text-sm text-white/80 hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                         @click="select(category)"
                     >
                         <span>{{ category.label }}</span>
                         <span
                             v-if="category.slug === selected.slug"
-                            class="text-emerald-300/90"
+                            class="text-accent"
                             >●</span
                         >
                     </button>
