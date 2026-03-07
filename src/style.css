@@ -3,3 +3,13 @@
 @theme {
   --font-sans: 'Roboto', sans-serif;
 }
+
+@layer utilities {
+    .bg-linear-160 {
+        --tw-gradient-position: 160deg in oklab;
+    }
+
+    .bg-linear-145 {
+        --tw-gradient-position: 145deg in oklab;
+    }
+}
