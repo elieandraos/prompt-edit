@@ -4,18 +4,7 @@
         class="relative z-20 flex items-center gap-3 rounded-full bg-white/10 px-6 py-3 ring-1 ring-white/20 backdrop-blur focus-within:ring-white/40"
     >
         <!-- Search icon -->
-        <svg
-            class="h-5 w-5 shrink-0 text-white/75"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            aria-hidden="true"
-        >
-            <path
-                fill-rule="evenodd"
-                d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z"
-                clip-rule="evenodd"
-            />
-        </svg>
+        <SearchIcon class="h-5 w-5 shrink-0 text-white/75" />
 
         <!-- Category trigger -->
         <button
@@ -25,19 +14,10 @@
             @click="toggle"
         >
             <span class="truncate">{{ selected.label }}</span>
-            <svg
+            <ChevronIcon
                 class="h-4 w-4 text-white/50 transition"
                 :class="open ? 'rotate-180' : ''"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                aria-hidden="true"
-            >
-                <path
-                    fill-rule="evenodd"
-                    d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 10.94l3.71-3.71a.75.75 0 1 1 1.06 1.06l-4.24 4.24a.75.75 0 0 1-1.06 0L5.21 8.29a.75.75 0 0 1 .02-1.08Z"
-                    clip-rule="evenodd"
-                />
-            </svg>
+            />
         </button>
 
         <!-- Input -->
@@ -75,6 +55,9 @@
 
 <script setup>
 import { computed, onBeforeUnmount, onMounted, ref } from "vue"
+
+import ChevronIcon from "../icons/ChevronIcon.vue"
+import SearchIcon from "../icons/SearchIcon.vue"
 
 const categories = [
     { label: "Video assets", slug: "video-assets" },
