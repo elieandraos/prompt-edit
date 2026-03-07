@@ -1,6 +1,6 @@
 <template>
     <section
-        class="relative flex min-h-[85vh] items-center bg-linear-160 from-[#DA548B] from-10% via-[#382546] via-45% to-[#0E172B] to-80%"
+        class="relative flex min-h-[80vh] items-center bg-linear-160 from-[#DA548B] from-10% via-[#382546] via-45% to-[#0E172B] to-80%"
     >
         <Container class="text-center">
             <h1

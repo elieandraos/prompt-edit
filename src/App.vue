@@ -1,14 +1,9 @@
 <template>
-    <Hero></Hero>
-
-    <section
-        id="platform"
-        class="relative overflow-hidden bg-[#0E172B] text-white"
-    >
-        <div class="mx-auto max-w-6xl px-6 py-24 sm:py-32"></div>
-    </section>
+    <Hero />
+    <AiSuiteSlider />
 </template>
 
 <script setup>
+import AiSuiteSlider from "./components/AiSuiteSlider.vue"
 import Hero from "./components/Hero.vue"
 </script>
