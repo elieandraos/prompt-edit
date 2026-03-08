@@ -26,7 +26,7 @@
                         <img
                             :src="slide.image"
                             :alt="slide.title"
-                            class="absolute inset-0 h-full w-full object-cover"
+                            class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
                         />
 
                         <div
@@ -49,7 +49,7 @@
                                     </p>
                                 </div>
                                 <span
-                                    class="text-xs text-white/65 group-hover:text-white/80"
+                                    class="text-xs text-white/65 transition-colors duration-300 group-hover:text-white/80"
                                 >
                                     Explore
                                 </span>
