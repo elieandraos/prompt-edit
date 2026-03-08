@@ -3,7 +3,7 @@
         id="templates"
         class="section-bg relative overflow-hidden text-slate-900"
     >
-        <Container class="py-16 sm:py-24">
+        <Container>
             <!-- Headline block -->
             <div class="mx-auto max-w-3xl text-center">
                 <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">

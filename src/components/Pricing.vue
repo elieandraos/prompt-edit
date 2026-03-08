@@ -3,7 +3,7 @@
         id="pricing"
         class="relative bg-linear-to-b from-slate-800 to-[#0E172B] text-white"
     >
-        <Container class="py-16 sm:py-24">
+        <Container>
             <!-- Heading -->
             <div class="mx-auto max-w-3xl text-center">
                 <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">

@@ -1,6 +1,6 @@
 <template>
     <footer class="bg-[#0E172B] text-white">
-        <Container class="py-16 sm:py-24">
+        <Container>
             <div class="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
                 <div v-for="col in columns" :key="col.heading">
                     <h3

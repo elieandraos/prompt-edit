@@ -3,7 +3,7 @@
         id="faq"
         class="section-bg relative overflow-hidden text-slate-900"
     >
-        <Container class="py-16 sm:py-24">
+        <Container>
             <h2
                 class="mx-auto text-center text-3xl font-semibold tracking-tight sm:text-4xl"
             >

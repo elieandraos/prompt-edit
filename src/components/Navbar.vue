@@ -31,6 +31,7 @@
 import { onBeforeUnmount, onMounted, ref } from "vue"
 
 const links = [
+    { label: "Explore", href: "#" },
     { label: "Contribute", href: "#" },
     { label: "Learn", href: "#" },
     { label: "Sign in", href: "#", primary: true },
