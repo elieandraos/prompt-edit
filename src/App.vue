@@ -3,6 +3,7 @@
     <Hero />
     <AiSuiteSlider />
     <Features />
+    <Discovery />
     <Pricing />
     <Faq />
     <Footer />
@@ -10,6 +11,7 @@
 
 <script setup>
 import AiSuiteSlider from "./components/AiSuiteSlider.vue"
+import Discovery from "./components/Discovery.vue"
 import Faq from "./components/Faq.vue"
 import Features from "./components/Features.vue"
 import Footer from "./components/Footer.vue"

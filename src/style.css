@@ -13,4 +13,27 @@
     .bg-linear-145 {
         --tw-gradient-position: 145deg in oklab;
     }
+
+    .reveal-hidden {
+        opacity: 0;
+        transform: translateY(1.5rem);
+        transition-property: opacity, transform;
+        transition-duration: 500ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .reveal-visible {
+        opacity: 1;
+        transform: translateY(0);
+        transition-property: opacity, transform;
+        transition-duration: 500ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal-hidden {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
 }

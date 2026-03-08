@@ -7,7 +7,7 @@
             <!-- Headline block -->
             <div class="mx-auto max-w-3xl text-center">
                 <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">
-                    Unlimited templates. Updated weekly.
+                    Unlimited templates. Fresh every week.
                 </h2>
 
                 <div class="relative mt-10">
@@ -43,16 +43,6 @@
                         </div>
                     </dl>
                 </div>
-
-                <div class="mt-8 flex justify-center">
-                    <a
-                        href="#"
-                        class="bg-accent focus-visible:ring-accent inline-flex items-center gap-3 rounded-xl px-5 py-3 text-sm font-medium text-white shadow-sm hover:opacity-90 focus-visible:ring-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-40"
-                    >
-                        Join now
-                        <ArrowRightIcon class="h-4 w-4" />
-                    </a>
-                </div>
             </div>
         </Container>
     </section>
@@ -60,7 +50,6 @@
 
 <script setup>
 import Container from "../layout/Container.vue"
-import ArrowRightIcon from "../icons/ArrowRightIcon.vue"
 import LayersIcon from "../icons/LayersIcon.vue"
 import MonitorIcon from "../icons/MonitorIcon.vue"
 import ShieldCheckIcon from "../icons/ShieldCheckIcon.vue"
