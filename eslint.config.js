@@ -5,6 +5,7 @@ import globals from "globals"
 import preferArrow from "eslint-plugin-prefer-arrow"
 
 export default [
+    { ignores: ["dist/**"] },
     js.configs.recommended,
     ...pluginVue.configs["flat/recommended"],
     configPrettier,
