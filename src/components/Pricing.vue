@@ -7,11 +7,8 @@
             <!-- Heading -->
             <div class="mx-auto max-w-3xl text-center">
                 <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">
-                    Simple pricing.
+                    Join thousands of creators building faster.
                 </h2>
-                <p class="mt-4 text-lg text-white/70">
-                    Unlimited template downloads. No complexity.
-                </p>
 
                 <!-- Toggle -->
                 <div
