@@ -2,6 +2,7 @@
 
 A landing page for a creative AI toolkit aimed at video editors and content creators.
 Live demo: https://prompt-edit.netlify.app/
+
 ---
 
 ## Design
